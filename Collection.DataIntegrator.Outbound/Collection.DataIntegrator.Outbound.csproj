@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>dotnet-collection.dataintegrator.outbound-4EF92EC7-2FE7-41FE-8D0D-CC4D91534C2F</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="2rc53525.qvo~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ChoETL.JSON.NETStandard" Version="1.2.1.11" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.11" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.1.11" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <PackageReference Include="SSH.NET" Version="2020.0.1" />
+  </ItemGroup>
+</Project>
