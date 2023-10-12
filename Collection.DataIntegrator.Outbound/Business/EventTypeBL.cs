@@ -18,12 +18,12 @@ namespace Collection.DataIntegrator.Outbound.Business
             _unitOfWork = unitOfWork;
         }
 
-        public EventType FetchOutboundEventTypes()
+        public List<EventType> FetchOutboundEventTypes()
         {
-            var list = new EventType();
+            var list = new List<EventType>();
             var ctx = _unitOfWork.GetContext();
             var rep = new GenericRepository<CommunicationQContext>(ctx);
-            list = rep.Find<EventType>(a => (a.Type == "Outbound" || a.Type == "outbound")).OrderBy(a=> a.EventTypeId).FirstOrDefault();
+            list = rep.Find<EventType>(a => (a.Type == "Outbound" || a.Type == "outbound")).OrderBy(a=> a.EventTypeId).ToList();
             _unitOfWork.Complete();
             return list;
         }

@@ -271,7 +271,7 @@ namespace Collection.DataIntegrator.Outbound
 
         public List<EventType> FetchOutboundEventTypes()
         {
-            var eventTypes = new EventType(); 
+            var eventTypes = new List<EventType>(); 
             try
             {
                 Business.EventTypeBL etBL = null;
